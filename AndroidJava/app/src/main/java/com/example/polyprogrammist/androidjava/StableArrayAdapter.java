@@ -76,6 +76,7 @@ public class StableArrayAdapter extends ArrayAdapter<HackatonInfoSimple> {
 
 class GetServerImage extends AsyncTask<String, Void, Bitmap> {
     private Exception exception;
+
     protected Bitmap doInBackground(String... urls) {
         try {
             URL url = new URL("https://pp.userapi.com/c840724/v840724238/104fd/VgVdbyiD2jI.jpg");
@@ -83,6 +84,7 @@ class GetServerImage extends AsyncTask<String, Void, Bitmap> {
             return bmp;
         } catch (Exception e) {
             this.exception = e;
+            e.printStackTrace();
             return null;
         }
     }

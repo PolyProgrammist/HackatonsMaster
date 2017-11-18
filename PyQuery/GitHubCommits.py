@@ -56,10 +56,6 @@ class GitHubRequester:
         res = [commit for commit in q if commit['sha'] not in self.commit_shas]
         return res
 
-def qequs():
-    ghr = GitHubRequester(GitHubRequester.owner_example, GitHubRequester.repo_example)
-    ghr.print_commits()
-    a = input()
-    ghr.print_commits()
-
-qequs()
+def qequs(owner = GitHubRequester.owner_example, repo = GitHubRequester.repo_example):
+    ghr = GitHubRequester(owner, repo)
+    return ghr.get_new_commits()

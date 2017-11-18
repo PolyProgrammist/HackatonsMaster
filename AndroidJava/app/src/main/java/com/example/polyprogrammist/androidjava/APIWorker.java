@@ -20,6 +20,7 @@ import javax.xml.parsers.SAXParserFactory;
 public class APIWorker {
     public String getHackatonImage(int hackatonID) {
         return "https://pp.userapi.com/c840724/v840724238/104fd/VgVdbyiD2jI.jpg";
+
     }
 
     public List<Integer> getHackatonIDs() {

@@ -63,7 +63,7 @@ public class TabActivity extends android.app.TabActivity {
 
         tabSpec = tabHost.newTabSpec("tag2");
         tabSpec.setIndicator("Проекты");
-        tabSpec.setContent(new Intent(this, ProjectsActivity.class));
+        tabSpec.setContent(new Intent(this, ProjectHistoryActivity.class));
         tabHost.addTab(tabSpec);
     }
 }
