@@ -7,5 +7,5 @@ use Illuminate\Notifications\Notifiable;
 
 class Hackathon extends Model{
     public $timestamps = false;
-    public $fillable = ['id', 'name', 'desc', 'logo'];
+    public $fillable = ['id', 'name', 'desc', 'logo', 'date'];
 }

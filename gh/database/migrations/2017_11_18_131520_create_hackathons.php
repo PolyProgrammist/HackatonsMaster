@@ -18,6 +18,7 @@ class CreateHackathons extends Migration
             $table->string('name');
             $table->string('desc');
             $table->string('logo');
+            $table->datetime('date');
         });
     }
 

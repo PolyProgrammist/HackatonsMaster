@@ -11,3 +11,7 @@ Route::get('/api/users/all/{id}', 'Api\UsersController@findByProject');
 Route::get('/api/users/{id}', 'Api\UsersController@find');
 Route::get('/api/content/all/{id}', 'Api\ContentController@findByProject');
 Route::get('/api/content/{id}', 'Api\ContentController@find');
+
+Route::get('/', function(){
+    return view('welcome');
+});

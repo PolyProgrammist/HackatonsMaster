@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class HackathonsController extends Controller
 {
     public function get(){
-        return Hackathon::all();
+        return Hackathon::orderBy('date', 'DESC')->get();
     }
 
     public function find($id){

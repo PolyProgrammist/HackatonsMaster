@@ -1,7 +1,10 @@
 <html>
 <head>
     <title>
-        hi
+        Android API
     </title>
 </head>
+<body>
+Server is here
+</body>
 </html>
