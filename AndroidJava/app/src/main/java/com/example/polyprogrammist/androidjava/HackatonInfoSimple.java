@@ -13,12 +13,13 @@ public class HackatonInfoSimple {
     String name;
     String date;
     String extraInfo;
-    Bitmap logo;
+    String logo;
 
-    public HackatonInfoSimple(String name, String date, String extraInfo, Bitmap logo, int id) {
+    public HackatonInfoSimple(String name, String date, String extraInfo, String logo, int id) {
         this.name = name;
         this.date = date;
         this.extraInfo = extraInfo;
         this.logo = logo;
+        this.id = id;
     }
 }
