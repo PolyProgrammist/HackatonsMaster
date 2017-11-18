@@ -14,8 +14,11 @@ class ProjectsController extends Controller
     public function get(){
         return Project::all();
     }
-
     public function find($id){
+        return Project::find($id);
+    }
+
+    public function findByHack($id){
         return Project::where(['hack_id' => $id])->get();
     }
 }
