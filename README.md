@@ -1,1 +1,1 @@
-# HackatonsMaster
+# README
