@@ -32,7 +32,7 @@ public class TabActivity extends android.app.TabActivity {
         setContentView(R.layout.activity_tab);
 
         final TabHost tabHost = getTabHost();
-        new JsonLoadTask(this, "http://192.168.137.1/api/hackathons/1",
+        new AsyncTaskNetwork(this, "http://192.168.137.1/api/hackathons/1",
                 new AsyncTaskCallback(){
                     @Override
                     public void run(Context context, Response response) {
@@ -64,41 +64,5 @@ public class TabActivity extends android.app.TabActivity {
                         tabHost.addTab(tabSpec);
                     }
                 }).execute();
-    }
-
-    static class JsonLoadTask extends AsyncTask<Void, Void, Response> {
-        String url;
-        Context context;
-        AsyncTaskCallback callback;
-
-        private JsonLoadTask(Context context, String url, AsyncTaskCallback callback) {
-            this.url = url;
-            this.context = context;
-            this.callback = callback;
-        }
-
-        @Override
-        protected Response doInBackground(Void... params) {
-            try {
-                OkHttpClient okHttpClient = new OkHttpClient.Builder()
-                        .build();
-
-                Request request = new Request.Builder()
-                        .url(url)
-                        .method("GET", null)
-                        .build();
-
-                return okHttpClient.newCall(request).execute();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Response response) {
-            super.onPostExecute(response);
-            callback.run(context, response);
-        }
     }
 }
