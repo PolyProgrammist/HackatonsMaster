@@ -1,0 +1,234 @@
+#wrapper {
+  background-color: #c4cad9; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+.participant-item {
+  border-bottom: 1px solid #c4cbdb;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif; }
+  .participant-item .avatar {
+    text-align: center;
+    padding-right: 0; }
+    .participant-item .avatar img {
+      width: 37px;
+      border-radius: 50px;
+      text-align: center;
+      margin: 6px; }
+  .participant-item .info {
+    padding-left: 0; }
+  .participant-item .name {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 5px; }
+  .participant-item .lang {
+    font-size: 11px; }
+  .participant-item .actions {
+    float: right;
+    font-size: 18px;
+    margin-top: -46px;
+    margin-right: 20px;
+    color: #fbfbfb; }
+    .participant-item .actions a {
+      color: #fbfbfb;
+      display: inline-block;
+      margin: 0 3px; }
+
+.participant-item:last-child {
+  border: 0 !important; }
+
+.event-projects {
+  position: relative;
+  background: #68779e; }
+  .event-projects h4 {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #435277;
+    color: #fbfbfb;
+    font-size: 19px;
+    padding: 9px 14px;
+    margin: 0; }
+  .event-projects .project_item h5 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center; }
+  .event-projects .project_item > ul {
+    margin-top: -4px;
+    list-style-type: none; }
+  .event-projects .project_item li {
+    border-bottom: 2px solid #435277;
+    font-family: 'Open Sans', sans-serif; }
+
+.hack-item .banner_hack {
+  position: relative; }
+
+.hack-item .short-actions {
+  position: absolute;
+  background: #435378;
+  width: 100%;
+  padding: 5px;
+  text-align: right; }
+  .hack-item .short-actions h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    float: left;
+    margin: 0;
+    margin-left: 20px;
+    color: #ffffff; }
+  .hack-item .short-actions a {
+    color: #ffffff;
+    font-size: 19px;
+    display: inline-block;
+    margin: 0 5px; }
+
+.hack-item .banner_hack-inner {
+  height: 290px;
+  text-align: center;
+  background: #68779e; }
+  .hack-item .banner_hack-inner img {
+    width: 70%;
+    margin-top: 48px;
+    overflow: hidden;
+    height: 76%; }
+
+.hack-item .info_hack {
+  background: #435378;
+  color: #fbfbfb;
+  margin-right: 0;
+  margin-left: 0; }
+  .hack-item .info_hack h4 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 19px; }
+  .hack-item .info_hack ul {
+    list-style-type: none; }
+  .hack-item .info_hack li {
+    margin-left: 32px;
+    font-family: 'Open Sans', sans-serif; }
+
+#map {
+  height: 300px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: inherit; }
+
+h1 {
+  color: #234522; }
+
+.hackathonBlock {
+  width: 50%;
+  height: 200px;
+  position: relative;
+  float: left;
+  background-color: blue; }
+
+.hackathonLogo {
+  width: 30%;
+  height: 100%;
+  background-color: yellow;
+  position: relative;
+  float: left; }
+
+.hackathonDescription {
+  height: 100%;
+  width: 70%;
+  background-color: yellow;
+  position: relative;
+  float: right; }
+
+.hackathonDate {
+  height: 20%;
+  background-color: magenta;
+  position: relative; }
+
+.hackathonName {
+  height: 80%;
+  background-color: green;
+  position: relative; }
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.a {
+  background-color: red; }
+
+.hackathonDetailName {
+  background-color: yellow; }
+
+.hackathonDetailDate {
+  background-color: red; }
+
+.hackathonDetailContacts {
+  background-color: blue; }
+
+.hackathonDetailContentBlock {
+  background-color: green; }
+
+.hackathonDetailProjectList {
+  background-color: magenta; }
+
+.logoImage {
+  float: left;
+  margin: 7px 7px 7px 0; }
+
+.event-participants {
+  background: #435479; }
+
+.eventDescription {
+  background: #68779e; }
+
+.projectsListBox {
+  width: 100%;
+  padding-top: 50px;
+  background: #68779e; }
+
+.projectBox {
+  height: 150px;
+  width: 50%;
+  background-color: yellow;
+  position: relative;
+  float: left; }
+
+.projectName {
+  width: 100%;
+  background: #435479;
+  border-bottom: 1px solid;
+  border-bottom-color: #68779e; }
+
+.projectMainBox {
+  width: 100%;
+  height: 100%;
+  background: #435479; }
+
+.projectLogo {
+  height: 100%;
+  background: #435479; }
+
+.projectDescription {
+  height: 100%;
+  background: #435479; }
+
+.form {
+  padding: 10px; }
+
+.post {
+  width: 100%;
+  background: #68779e; }
+
+.postContent {
+  border-left: 1px solid;
+  border-left-color: #435479;
+  border-bottom: 1px solid;
+  border-bottom-color: #435479; }
+
+.header {
+  background: #435479;
+  border-bottom: 1px solid;
+  border-bottom-color: #68779e;
+  margin-bottom: 25px; }

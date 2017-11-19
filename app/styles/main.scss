@@ -1,0 +1,153 @@
+
+@import "_event";
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: inherit;
+}
+
+h1{
+    color:#234522;
+}
+
+.hackathonBlock {
+  width: 50%;
+  height: 200px;
+  position: relative;
+  float: left;
+  background-color: blue;
+}
+
+.hackathonLogo {
+  width: 30%;
+  height: 100%;
+  background-color: yellow;
+  position: relative;
+  float: left;
+}
+
+.hackathonDescription {
+  height: 100%;
+  width: 70%;
+  background-color: yellow;
+  position: relative;
+  float: right;
+}
+
+.hackathonDate {
+  height: 20%;
+  background-color: magenta;
+  position: relative;
+}
+
+.hackathonName {
+  height: 80%;
+  background-color: green;
+  position: relative;
+}
+
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.a{
+  background-color: red;
+}
+
+.hackathonDetailName {
+  background-color: yellow;
+}
+
+.hackathonDetailDate {
+  background-color: red;
+}
+
+.hackathonDetailContacts {
+  background-color: blue;
+}
+
+.hackathonDetailContentBlock {
+  background-color: green;
+}
+
+.hackathonDetailProjectList {
+  background-color: magenta;
+}
+
+.logoImage {
+  float: left;
+  margin: 7px 7px 7px 0;
+}
+.event-participants {
+    background: #435479;
+}
+.eventDescription {
+  background: #68779e;
+}
+
+.projectsListBox {
+  width: 100%;
+  padding-top: 50px;
+  background: #68779e;
+}
+
+.projectBox {
+  height: 150px;
+  width: 50%;
+  background-color: yellow;
+  position: relative;
+  float: left;
+}
+
+.projectName {
+  width: 100%;
+  background: #435479;
+  border-bottom: 1px solid;
+  border-bottom-color: #68779e;
+}
+
+.projectMainBox {
+  width: 100%;
+  height: 100%;
+  background: #435479;
+}
+
+.projectLogo {
+  height: 100%;
+  background: #435479;
+}
+
+.projectDescription {
+  height: 100%;
+  background: #435479;
+}
+
+.form {
+  padding: 10px;
+}
+
+.post {
+  width: 100%;
+  background: #68779e;
+}
+
+.postDate {
+
+}
+
+.postContent {
+  border-left: 1px solid;
+  border-left-color: #435479;
+  border-bottom: 1px solid;
+  border-bottom-color: #435479;
+}
+
+.header {
+    background: #435479;
+    border-bottom: 1px solid;
+    border-bottom-color: #68779e;
+    margin-bottom: 25px;
+}

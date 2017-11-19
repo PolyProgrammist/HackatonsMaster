@@ -1,0 +1,118 @@
+<div>
+  <!-- {{$ctrl.data}}
+  {{$ctrl.userlist}}
+    <div class="btn btn-primary">new post</div> -->
+    <div class="row">
+      <div class="col-sm-8">
+          <div class="row">
+              <div class="col-sm-12 hack-item">
+                  <div class="banner_hack">
+                      <div class="short-actions">
+                          <h3>{{$ctrl.data.name}}</h3>
+                          <!-- <a href="javascript:void(0)"><i class="fa fa-users" aria-hidden="true"></i></a>
+                          <a href="javascript:void(0)"><i class="fa fa-map-marker" aria-hidden="true"></i></a> -->
+                      </div>
+                      <div class="banner_hack-inner">
+                          <img src="/images/back_hack.jpg"/>
+                      </div>
+                  </div>
+                  <div class = "eventDescription">
+                    {{$ctrl.data.desc}}
+                  </div>
+                  {{$ctrl.users}}
+                  <div class="info_hack row form">
+                    <div class="form-group">
+                      <label for="comment">New post:</label>
+                      <textarea class="form-control"  ng-model="$ctrl.formPost.comment" rows="5" id="comment"></textarea>
+<br>
+                      <input type="text" class="form-control" ng-model="$ctrl.formPost.link" placeholder="Youtube">
+<br>
+                    <label class="custom-file">
+                      <input type="file" id="file2" class="custom-file-input">
+                      <span class="custom-file-control"></span>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary" ng-click="$ctrl.addPost()">Submit</button>
+                  </div>
+
+                  </div>
+                  <!-- {{$ctrl.posts}} -->
+                  <div class="info_hack row">
+                    <ul>
+                      <li ng-repeat="item in $ctrl.posts | orderBy:'-'">
+                        <!-- {$item} -->
+                        <div class="row post">
+                          <div class="col-sm-3 postDate">
+                            <div class="row">
+                              {{item.time | date : 'yyyy-MM-dd HH:mm:ss Z'}}
+                            </div>
+                            <div class="row">
+                            </div>
+                          </div>
+                          <div class="col-sm-9 postContent">
+                            post
+                            <div ng-if="item.photo != 0">
+                              <img src="http://gh/storage/{{item.photo}}">
+                            </div>
+                            <div ng-if="item.video != 0">
+                              <iframe width="480" height="360" src="https://www.youtube.com/embed/UcYoC7uQzNA" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div ng-if="item.text != 0">
+                              {{item.text}}
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="line-posts">
+                      <div class="post-item">
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- <div class="col-md-8 hackathonDetailContentBlock">
+        <img src="http://gh/storage/{{$ctrl.data.logo}}" class="logoImage">
+
+      </div> -->
+      <div class="col-sm-4">
+          <div class="event-projects">
+              <h4>Участники</h4>
+              <div class="project_item">
+                  <ul>
+                      <li>
+                          <!-- <h5>Название проекта</h5> -->
+                          <div class="participant-item" ng-repeat="item in $ctrl.users">
+                              <div class="row">
+                                  <div class="col-sm-3 avatar">
+                                      <img src="/images/avatar.jpg"/>
+                                  </div>
+                                  <div class="col-sm-9 info">
+                                      <a ui-sref="app.auth.event({id:item.id})">
+                                        <p class="name">{{item.name}}</p>
+                                      </a>
+                                      <a ui-sref="app.auth.event({id:item.id})">
+                                        <p class="lang"><span>{{item.desc}}</span></p>
+                                      </a>
+                                      <div class="actions">
+                                          <a href="javascript:void(0)"><i class="fa fa-info" aria-hidden="true"></i></a>
+                                          <a href="javascript:void(0)"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                                          <a href="javascript:void(0)"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+</div>

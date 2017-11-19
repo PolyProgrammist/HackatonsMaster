@@ -1,0 +1,26 @@
+<div>
+    overview
+    <ul id="hackathonsList">
+      <li class="item" ng-repeat="item in $ctrl.data">
+        <div class="hackathonBlock">
+          <a ui-sref="app.auth.event({id:item.id})">
+            <div class="hackathonLogo">
+              <img src="http://gh/storage/{{item.logo}}">
+            </div>
+          </a>
+          <div class="hackathonDescription">
+            <a ui-sref="app.auth.event({id:item.id})">
+              <div class="hackathonDate">date</div>
+            </a>
+            <a ui-sref="app.auth.event({id:item.id})">
+              <div class="hackathonName">{{item.name}}</div>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <!-- <div class="item" ng-repeat="item in $ctrl.data">
+      {{item}}
+        <a ui-sref="app.auth.event({id:1})">Event link 1</a>
+    </div> -->
+</div>

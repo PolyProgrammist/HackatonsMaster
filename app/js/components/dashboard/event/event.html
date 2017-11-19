@@ -1,0 +1,228 @@
+<div>
+  {{$ctrl.data}}
+    <!-- event
+    {{$ctrl.data}}
+    <div class="row">
+      <div class="col-md-4 hackathonDetailName">
+        {{$ctrl.data.name}}
+      </div>
+      <div class="col-md-6 col-md-offset-2">
+        <div class="row hackathonDetailDate">
+          {{$ctrl.data.date}}
+        </div>
+        <div class="row hackathonDetailContacts">
+          cont
+        </div>
+      </div>
+    </div> -->
+    <div class="row">
+      <div class="col-sm-8">
+          <div class="row">
+              <div class="col-sm-12 hack-item">
+                  <div class="banner_hack">
+                      <div class="short-actions">
+                          <h3>{{$ctrl.data.name}}</h3>
+                          <a href="javascript:void(0)"><i class="fa fa-users" aria-hidden="true"></i></a>
+                          <a href="javascript:void(0)"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                      </div>
+                      <div class="banner_hack-inner">
+                          <img src="/images/back_hack.jpg"/>
+                      </div>
+                  </div>
+                  <div class = "eventDescription">
+                    {{$ctrl.data.desc}}
+                  </div>
+                  <div class="info_hack row">
+                      <div class="col-sm-6">
+                          <h4>В чем профит:</h4>
+                          <ul>
+                              <li>Реализуй идею</li>
+                              <li>Получи опыт</li>
+                              <li>Расширь круг знакомств</li>
+                              <li>Проведи выходные с пользой</li>
+                          </ul>
+                      </div>
+                      <div class="col-sm-6">
+                          <h4>Места:</h4>
+                          <ul>
+                              <li>
+                                  <span class="title">1 место:</span>
+                                  <span class="value">-</span>
+                              </li>
+                              <li>
+                                  <span class="title">2 место:</span>
+                                  <span class="value">-</span>
+                              </li>
+                              <li>
+                                  <span class="title">3 место:</span>
+                                  <span class="value">-</span>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="line-posts">
+                      <div class="post-item">
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- <div class="col-md-8 hackathonDetailContentBlock">
+        <img src="http://gh/storage/{{$ctrl.data.logo}}" class="logoImage">
+
+      </div> -->
+      <div class="col-sm-4">
+          <div class="event-projects">
+              <h4>Участники</h4>
+              <div class="project_item">
+                  <ul>
+                      <li>
+                          <!-- <h5>Название проекта</h5> -->
+                          <div class="participant-item" ng-repeat="item in $ctrl.participant">
+                              <div class="row">
+                                  <div class="col-sm-3 avatar">
+                                      <img src="/images/{{item.avatar}}"/>
+                                  </div>
+                                  <div class="col-sm-9 info">
+                                      <p class="name">{{item.name}}</p>
+                                      <p class="lang"><span>{{item.lang}}</span></p>
+                                      <div class="actions">
+                                          <a href="javascript:void(0)"><i class="fa fa-info" aria-hidden="true"></i></a>
+                                          <a href="javascript:void(0)"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                                          <a href="javascript:void(0)"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+      <!-- <div class="col-sm-4">
+          <div class="event-participants">
+              <div class="participant-item" ng-repeat="item in $ctrl.participant">
+                  <div class="row">
+                      <div class="col-sm-3 avatar">
+                          <img src="/images/{{item.avatar}}"/>
+                      </div>
+                      <div class="col-sm-9 info">
+                          <p class="name">{{item.name}}</p>
+                          <p class="lang"><span>{{item.lang}}</span></p>
+                          <div class="actions">
+                              <a href="javascript:void(0)"><i class="fa fa-info" aria-hidden="true"></i></a>
+                              <a href="javascript:void(0)"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                              <a href="javascript:void(0)"><i class="fa fa-download" aria-hidden="true"></i></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+    </div>
+    {{$ctrl.projectsList}}
+    <div class="row">
+      <div class="col-sm-8">
+          <div class="row">
+              <div class="col-sm-12 hack-item">
+                  <div class="banner_hack">
+                      <div class="short-actions">
+                          <h3>Проекты</h3>
+                          <!-- <a href="javascript:void(0)"><i class="fa fa-users" aria-hidden="true"></i></a>
+                          <a href="javascript:void(0)"><i class="fa fa-map-marker" aria-hidden="true"></i></a> -->
+                          <div class="projectsListBox">
+                              <ul>
+                                <li ng-repeat="item in $ctrl.projectsList">
+                                    <div class="projectBox">
+                                      <div class="projectName">
+                                        <a ui-sref="app.auth.project({id:item.id})">
+                                        {{item.name}}
+                                      </a>
+                                      </div>
+                                        <div class="projectMainBox">
+                                          <div class="col-sm-3 projectLogo">
+                                            <a ui-sref="app.auth.project({id:item.id})">
+
+                                            <img src="http://via.placeholder.com/80x100">
+                                          </a>
+
+                                          </div>
+
+                                          <div class="col-sm-9 projectDescription">
+                                            <a ui-sref="app.auth.project({id:item.id})">
+
+                                            {{item.desc}}
+                                          </a>
+                                          </div>
+
+                                      </div>
+                                    </div>
+                                    <!-- <a ui-sref="app.auth.project({id:item.id})">
+                                      <div class="projectName">
+                                        {{item.name}}
+                                      </div>
+                                    </a> -->
+                                    <!-- <div class = "projectMainBlock"> -->
+                                    <!-- <a ui-sref="app.auth.project({id:item.id})">
+                                      <div class="projectLogo">
+                                        <img src="http://via.placeholder.com/100x150">
+                                      </div>
+                                    </a>
+                                    <a ui-sref="app.auth.project({id:item.id})">
+                                      <div class="projectDescription">
+                                        {{item.desc}}
+                                      </div>
+                                    </a> -->
+                                  <!-- </div> -->
+                                </li>
+                              </ul>
+                          </div>
+                      </div>
+
+                  </div>
+                  <!-- <div class = "eventDescription">
+                    {{$ctrl.data.desc}}
+                  </div> -->
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="line-posts">
+                      <div class="post-item">
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-md-4 hackathonDetailProjectList">
+        <ul>
+          <li ng-repeat="item in $ctrl.projectsList">
+            <a ui-sref="app.auth.project({id:item.id})">
+              <div class="row projectListItem">
+                <div class="col-md-9 projectListItemName">
+                  {{item.name}}
+                </div>
+                <div class="col-md-3 projectListItemPrize">
+                  <div ng-if="item.result_id != 0">
+                    {{item.result_id}}
+                  </div>
+                </div>
+              </div>
+            </a>
+
+          </li>
+        </ul>
+      </div>
+    </div> -->
+</div>
+<!-- {{$ctrl.orgsList}} -->
