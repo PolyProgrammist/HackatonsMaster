@@ -15,6 +15,6 @@ class ContentController extends Controller
     }
 
     public function findByProject($id){
-        return Content::where(['project_id' => $id])->get();
+        return Content::where(['project_id' => $id])->orderBy('time', 'DESC')->get();
     }
 }

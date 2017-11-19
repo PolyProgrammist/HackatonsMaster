@@ -7,5 +7,5 @@ use Illuminate\Notifications\Notifiable;
 
 class Project extends Model{
     public $timestamps = false;
-    public $fillable = ['id', 'name', 'desc', 'demo', 'hack_id', 'result_id'];
+    public $fillable = ['id', 'git', 'name', 'desc', 'demo', 'hack_id', 'result_id'];
 }

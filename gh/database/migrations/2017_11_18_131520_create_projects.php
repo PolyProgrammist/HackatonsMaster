@@ -16,6 +16,7 @@ class CreateProjects extends Migration
 //        public $fillable = ['id', 'name', 'desc', 'demo', 'hack_id', 'result_id'];
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('git');
             $table->string('name');
             $table->string('desc');
             $table->string('demo');

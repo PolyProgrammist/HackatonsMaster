@@ -21,8 +21,14 @@
         <activity
             android:name=".TabActivity"
             android:label="@string/app_name" />
-        <activity android:name=".ProjectsActivity" android:theme="@android:style/Theme.Light.NoTitleBar"/>
-        <activity android:name=".HackActivity" android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".ProjectsActivity"
+            android:theme="@android:style/Theme.Light" />
+        <activity
+            android:name=".HackActivity"
+            android:theme="@android:style/Theme.Light" />
+        <activity android:name=".FeedActivity" />
+        <activity android:name=".UsersActivity"></activity>
     </application>
 
 </manifest>

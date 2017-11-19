@@ -3,11 +3,15 @@ package com.gh.androidapp;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import org.apache.commons.lang.StringEscapeUtils;
+
+import java.io.IOException;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class AsyncTaskNetwork extends AsyncTask<Void, Void, Response> {
+public class AsyncTaskNetwork extends AsyncTask<Void, Void, String> {
     String url;
     Context context;
     AsyncTaskCallback callback;
@@ -19,7 +23,7 @@ public class AsyncTaskNetwork extends AsyncTask<Void, Void, Response> {
     }
 
     @Override
-    protected Response doInBackground(Void... params) {
+    protected String doInBackground(Void... params) {
         try {
             OkHttpClient okHttpClient = new OkHttpClient.Builder()
                     .build();
@@ -29,7 +33,8 @@ public class AsyncTaskNetwork extends AsyncTask<Void, Void, Response> {
                     .method("GET", null)
                     .build();
 
-            return okHttpClient.newCall(request).execute();
+            Response response = okHttpClient.newCall(request).execute();
+            return StringEscapeUtils.unescapeJava(response.body().string());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -37,7 +42,7 @@ public class AsyncTaskNetwork extends AsyncTask<Void, Void, Response> {
     }
 
     @Override
-    protected void onPostExecute(Response response) {
+    protected void onPostExecute(String response) {
         super.onPostExecute(response);
         callback.run(context, response);
     }

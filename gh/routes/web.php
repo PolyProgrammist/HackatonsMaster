@@ -8,6 +8,7 @@ Route::get('/api/projects/{id}', 'Api\ProjectsController@findByHack');
 Route::get('/api/project/{id}', 'Api\ProjectsController@find');
 Route::get('/api/orgs/all/{id}', 'Api\OrgController@findByHackathon');
 Route::get('/api/orgs/{id}', 'Api\OrgController@find');
+Route::get('/api/users/hack/{id}', 'Api\UsersController@findByHack');
 Route::get('/api/users/all/{id}', 'Api\UsersController@findByProject');
 Route::get('/api/users/{id}', 'Api\UsersController@find');
 Route::get('/api/content/all/{id}', 'Api\ContentController@findByProject');

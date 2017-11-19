@@ -20,16 +20,25 @@ import android.widget.TextView;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import static com.gh.androidapp.MainActivity.SERVER_URL;
+import static com.gh.androidapp.MainActivity.hackLogos;
+
 
 public class MainListAdapter extends ArrayAdapter<String> {
     private final Activity context;
+    private String[] names;
+    private String[] dates;
 
-    public MainListAdapter(Activity context, String[] values) {
-        super(context, R.layout.list_single_main, values);
+    public MainListAdapter(Activity context, String[] names, String[] dates){
+        super(context, R.layout.list_single_main, names);
         this.context = context;
+        this.names = names;
+        this.dates = dates;
     }
-
-    // https://pp.userapi.com/c837721/v837721567/5ce2a/oNTd2QBCi5Y.jpg
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -40,9 +49,19 @@ public class MainListAdapter extends ArrayAdapter<String> {
         TextView name = single.findViewById(R.id.tv_name);
         ImageView img = single.findViewById(R.id.iv_logo);
 
-        new ImageLoadTask("http://192.168.137.1/storage/steam.png", img).execute();
-        name.setText("Just 4 test");
-        date.setText("27 Nov");
+        String datestr = dates[position];
+        SimpleDateFormat start = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat back = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            Date vdate = start.parse(datestr);
+            datestr = back.format(vdate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        img.setImageBitmap(hackLogos[position]);
+        name.setText(names[position]);
+        date.setText(datestr);
 
         return single;
     }
@@ -50,11 +69,11 @@ public class MainListAdapter extends ArrayAdapter<String> {
 
 class ImageLoadTask extends AsyncTask<Void, Void, Bitmap> {
     private String url;
-    private ImageView imageView;
+    private Integer pos;
 
-    public ImageLoadTask(String url, ImageView imageView) {
-        this.url = url;
-        this.imageView = imageView;
+    public ImageLoadTask(String url, Integer pos) {
+        this.url = "http://192.168.137.1/storage/" + url;
+        this.pos = pos;
     }
 
     @Override
@@ -76,7 +95,6 @@ class ImageLoadTask extends AsyncTask<Void, Void, Bitmap> {
     @Override
     protected void onPostExecute(Bitmap result) {
         super.onPostExecute(result);
-        imageView.setImageBitmap(result);
+        hackLogos[pos] = result;
     }
-
 }

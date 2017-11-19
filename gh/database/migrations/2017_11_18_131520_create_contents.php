@@ -16,6 +16,7 @@ class CreateContents extends Migration
 //        public $fillable = ['id', 'text', 'photo', 'video', 'git', 'project_id', 'time'];
         Schema::create('contents', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('author');
             $table->string('text');
             $table->string('photo');
             $table->string('video');
